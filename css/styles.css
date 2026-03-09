@@ -1,3 +1,12 @@
+/* Box model fix */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   background-color: whitesmoke;
@@ -6,7 +15,15 @@ body {
   line-height: 1.6;
 }
 
-h1, h2 {
+.content-wrap {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 50px;
+  overflow: hidden;
+}
+
+h1,
+h2 {
   font-family: "Merriweather", Georgia, serif;
 }
 
@@ -18,31 +35,50 @@ h1 {
 h2 {
   font-size: 24px;
   font-weight: 700;
+  margin-top: 0;
 }
 
 header {
   background-color: white;
-  padding: 30px;
-  text-align: center;
+}
+
+header h1,
+header h2 {
+  margin: 0;
 }
 
 section {
   background-color: lightgray;
-  padding: 20px;
   margin: 20px;
   border-radius: 6px;
 }
 
 footer {
   background-color: white;
-  padding: 20px;
   text-align: center;
 }
 
-img {
-  width: 150px;
+.profile-img {
+  width: 100%;
   border-radius: 50%;
-  margin-bottom: 10px;
+}
+
+.column-narrow {
+  width: 30%;
+  float: left;
+  padding-right: 3%;
+  min-height: 175px;
+}
+
+.column-wide {
+  width: 70%;
+  float: left;
+  min-height: 225px;
+}
+
+.contact-info a {
+  padding: 10px;
+  display: inline-block;
 }
 
 a {
